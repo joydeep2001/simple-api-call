@@ -1,38 +1,154 @@
 .App {
-  text-align: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(4, 1, 26);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.sl {
+  height: 300px;
+  width: 300px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.email {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.bg-blue {
+  background-color: blue;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.img-cont {
+  height: 128px;
+  width: 128px;
+  border-radius: 50%;
+  overflow: hidden;
+  user-select: none;
+  margin-bottom: 5px;
+}
+.user-card {
+  background-color: aliceblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 20px;
+  transition: 0.5s;
+}
+.user-card:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  transition: 0.5s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
+.button-tray {
+  min-height: 100px;
+  max-height: auto;
+  width: 350px;
+  background-color: aliceblue;
+  margin-top: 30px;
+  margin-left: -20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  border-radius: 10px;
+}
+
+.btn-sm {
+  height: 30px;
+  width: 30px;
+  opacity: 0.6;
+  margin: 10px;
+}
+button:hover {
+  cursor: pointer;
+}
+
+.circle {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background-color: #9e9e9e;
+  opacity: 0.6;
+}
+
+.skeleton-loader {
+  background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0.5) 50%,
+      rgba(255, 255, 255, 0) 80%
+    ),
+    lightgray;
+  background-repeat: repeat-y;
+  background-size: 50px 500px;
+  background-position: 0 0;
+  animation: shine 1s infinite;
+}
+.loader-card {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  background-color: #9e9e9e;
+}
+
+.name-sk {
+  height: 20px;
+  width: 200px;
+  border-radius: 10px;
+  margin: 10px;
+}
+.email-sk {
+  height: 15px;
+  width: 150px;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+@keyframes shine {
   to {
-    transform: rotate(360deg);
+    background-position: 100% 0;
+  }
+}
+.jump1,
+.jump2,
+.jump3 {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background-color: white;
+}
+
+.jump1 {
+  animation: typing 4s infinite;
+  animation-delay: 0s;
+}
+
+.jump2 {
+  animation: typing 4s infinite;
+  animation-delay: 0.2s;
+}
+
+.jump3 {
+  animation: typing 4s infinite;
+  animation-delay: 0.4s;
+}
+
+@keyframes typing {
+  0% {
+    transform: translateY(0px);
+    background-color: gray;
+  }
+  33% {
+    transform: translateY(20px);
+  }
+  66% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
   }
 }
